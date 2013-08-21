@@ -15,7 +15,11 @@
 
 <style type="text/css">
 body { margin: 0; padding: 0; background: #000; }
-canvas { display: block; margin:0 auto; background: #fff; }
+canvas {
+  display: block;
+  margin: 0 auto; /* center */
+  background: #fff;
+}
 </style>
 
 </head>
@@ -24,6 +28,18 @@ canvas { display: block; margin:0 auto; background: #fff; }
   <canvas></canvas>
   <script type="text/javascript">
   // all the code goes here
+  // namespace our game
+  var POP = {
+    // set up some initial values
+    // TODO
+    init: function() {
+
+    }
+    // ...
+  };
+
+  window.addEventListener('load', POP.init, false);
+  // ...
   </script>
 </body>
 </html>

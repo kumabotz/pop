@@ -58,10 +58,10 @@ canvas {
 
         // we need to sniff out Android and iOS
         // so that we can hide the address bar in our resize function
-        POP.ua = navigator.userAgent.toLowercase();
-        POP.android = POP.ua.indexOf('android') > -1 ? true : false;
-        POP.ios = (POP.ua.indexOf('iphone') > -1 ||
-            POP.ua.indexOf('ipad') > -1) ? true : false;
+        POP.ua = navigator.userAgent;
+        POP.android = POP.ua.indexOf('Android') > -1 ? true : false;
+        POP.ios = (POP.ua.indexOf('iPhone') > -1 ||
+            POP.ua.indexOf('iPad') > -1) ? true : false;
 
         // we're ready to resize
         POP.resize();
@@ -94,13 +94,6 @@ canvas {
 
     window.addEventListener('load', POP.init, false);
     window.addEventListener('resize', POP.resize, false);
-
-    // debug
-    alert(navigator.userAgent + '\n' +
-        'Android = ' + navigator.userAgent.indexOf('Android') + '\n' +
-        'iPhone = ' + navigator.userAgent.indexOf('iPhone') + '\n' +
-        'iPad = ' + navigator.userAgent.indexOf('iPad'));
-
   </script>
 </body>
 </html>

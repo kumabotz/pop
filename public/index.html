@@ -70,6 +70,29 @@ canvas {
         POP.Draw.rect(120, 120, 150, 150, 'green');
         POP.Draw.circle(100, 100, 50, 'rgba(255, 0, 0, 0.5)');
         POP.Draw.text('Hello World', 100, 100, 10, '#000');
+
+        // listen for clicks
+        window.addEventListener('click', function(e) {
+          e.preventDefault();
+          POP.Input.set(e);
+        }, false);
+
+        // listen for touches
+        window.addEventListener('touchstart', function(e) {
+          e.preventDefault();
+          // the event object has any array named touches; we just want the
+          // first touch
+          POP.Input.set(e.touches[0]);
+        }, false);
+        window.addEventListener('touchmove', function(e) {
+          // we're not interested in this, but prevent default behaviour so the
+          // screen doesn't scroll or zoom
+          e.preventDefault();
+        }, false);
+        window.addEventListener('touched', function(e) {
+          // as above
+          e.preventDefault();
+        }, false);
       },
 
       resize: function() {
@@ -121,6 +144,10 @@ canvas {
         POP.ctx.fillStyle = col;
         POP.ctx.fillText(string, x, y);
       }
+    };
+
+    POP.Input = {
+      // TODO
     };
 
     window.addEventListener('load', POP.init, false);

@@ -177,6 +177,16 @@ var POP = {
         hit = POP.collides(POP.entities[i],
             {x: POP.Input.x, y: POP.Input.y, r: 7});
         if (hit) {
+          // spawn an explosion
+          for (var n = 0; n < 5; n += 1) {
+            POP.entities.push(new POP.Particle(
+                POP.entities[i].x,
+                POP.entities[i].y,
+                2,
+                // random opacity to spice it up a bit
+                'rgba(255,255,255,' + Math.random() * 1 + ')'
+            ));
+          }
           POP.score.hit += 1;
         }
         POP.entities[i].remove = hit;
@@ -326,6 +336,46 @@ POP.Bubble = function() {
 
   this.render = function() {
     POP.Draw.circle(this.x, this.y, this.r, 'rgba(255,255,255,1)');
+  };
+};
+
+POP.Particle = function(x, y, r, col) {
+  this.x = x;
+  this.y = y;
+  this.r = r;
+  this.col = col;
+
+  // determines whether particle will travel to the right or left
+  // 50% chance of either happening
+  this.dir = (Math.random() * 2 > 1) ? 1 : -1;
+
+  // random values so particles do not travel at the same speeds
+  this.vx = ~~(Math.random() * 4) * this.dir;
+  this.vy = ~~(Math.random() * 7);
+
+  this.remove = false;
+
+  this.update = function() {
+    // update coordinates
+    this.x += this.vx;
+    this.y += this.vy;
+
+    // increase velocity so particle accelerates off screen
+    this.vx *= 0.99;
+    this.vy *= 0.99;
+
+    // adding this negative amount to the y velocity exerts an upward pull on
+    // the particle, as if drawn to the surface
+    this.vy -= 0.25;
+
+    // off screen
+    if (this.y < 0) {
+      this.remove = true;
+    }
+  };
+
+  this.render = function() {
+    POP.Draw.circle(this.x, this.y, this.r, this.col);
   };
 };
 

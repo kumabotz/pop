@@ -25,133 +25,151 @@ canvas {
 </head>
 
 <body>
-  <canvas></canvas>
-  <script type="text/javascript">
-    // all the code goes here
-    // namespace our game
-    var POP = {
-      // set up some initial values
-      WIDTH: 320,
-      HEIGHT: 480,
-      // we'll set the rest of these
-      // in the init function
-      RATIO: null,
-      currentWidth: null,
-      currentHeight: null,
-      canvas: null,
-      ctx: null,
+<canvas></canvas>
+<script type="text/javascript">
+// all the code goes here
+// namespace our game
+var POP = {
+  // set up some initial values
+  WIDTH: 320,
+  HEIGHT: 480,
+  scale: 1,
+  // the position of the canvas in relation to the screen
+  offset: {top: 0, left: 0},
 
-      init: function() {
-        // the proportion of width to height
-        POP.RATIO = POP.WIDTH / POP.HEIGHT;
-        // these will change when the screen is resized
-        POP.currentWidth = POP.WIDTH;
-        POP.currentHeight = POP.HEIGHT;
-        // this is our canvas element
-        POP.canvas = document.getElementsByTagName('canvas')[0];
-        // setting this is important, otherwise the browser will default to
-        // 320 x 200
-        POP.canvas.width = POP.WIDTH;
-        POP.canvas.height = POP.HEIGHT;
-        // the canvas context enables us to interact with the canvas api
-        POP.ctx = POP.canvas.getContext('2d');
+  // we'll set the rest of these
+  // in the init function
+  RATIO: null,
+  currentWidth: null,
+  currentHeight: null,
+  canvas: null,
+  ctx: null,
 
-        // we need to sniff out Android and iOS
-        // so that we can hide the address bar in our resize function
-        POP.ua = navigator.userAgent;
-        POP.android = POP.ua.indexOf('Android') > -1 ? true : false;
-        POP.ios = (POP.ua.indexOf('iPhone') > -1 ||
-            POP.ua.indexOf('iPad') > -1) ? true : false;
+  init: function() {
+    // the proportion of width to height
+    POP.RATIO = POP.WIDTH / POP.HEIGHT;
+    // these will change when the screen is resized
+    POP.currentWidth = POP.WIDTH;
+    POP.currentHeight = POP.HEIGHT;
+    // this is our canvas element
+    POP.canvas = document.getElementsByTagName('canvas')[0];
+    // setting this is important, otherwise the browser will default to
+    // 320 x 200
+    POP.canvas.width = POP.WIDTH;
+    POP.canvas.height = POP.HEIGHT;
+    // the canvas context enables us to interact with the canvas api
+    POP.ctx = POP.canvas.getContext('2d');
 
-        // we're ready to resize
-        POP.resize();
+    // we need to sniff out Android and iOS
+    // so that we can hide the address bar in our resize function
+    POP.ua = navigator.userAgent;
+    POP.android = POP.ua.indexOf('Android') > -1 ? true : false;
+    POP.ios = (POP.ua.indexOf('iPhone') > -1 ||
+        POP.ua.indexOf('iPad') > -1) ? true : false;
 
-        POP.Draw.clear();
-        POP.Draw.rect(120, 120, 150, 150, 'green');
-        POP.Draw.circle(100, 100, 50, 'rgba(255, 0, 0, 0.5)');
-        POP.Draw.text('Hello World', 100, 100, 10, '#000');
+    // listen for clicks
+    window.addEventListener('click', function(e) {
+      e.preventDefault();
+      POP.Input.set(e);
+    }, false);
 
-        // listen for clicks
-        window.addEventListener('click', function(e) {
-          e.preventDefault();
-          POP.Input.set(e);
-        }, false);
+    // listen for touches
+    window.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      // the event object has any array named touches; we just want the
+      // first touch
+      POP.Input.set(e.touches[0]);
+    }, false);
+    window.addEventListener('touchmove', function(e) {
+      // we're not interested in this, but prevent default behaviour so the
+      // screen doesn't scroll or zoom
+      e.preventDefault();
+    }, false);
+    window.addEventListener('touched', function(e) {
+      // as above
+      e.preventDefault();
+    }, false);
 
-        // listen for touches
-        window.addEventListener('touchstart', function(e) {
-          e.preventDefault();
-          // the event object has any array named touches; we just want the
-          // first touch
-          POP.Input.set(e.touches[0]);
-        }, false);
-        window.addEventListener('touchmove', function(e) {
-          // we're not interested in this, but prevent default behaviour so the
-          // screen doesn't scroll or zoom
-          e.preventDefault();
-        }, false);
-        window.addEventListener('touched', function(e) {
-          // as above
-          e.preventDefault();
-        }, false);
-      },
+    // we're ready to resize
+    POP.resize();
 
-      resize: function() {
-        POP.currentHeight = window.innerHeight;
-        // resize the width in propotion to the new height
-        POP.currentWidth = POP.currentHeight * POP.RATIO;
+    POP.Draw.clear();
+    POP.Draw.rect(120, 120, 150, 150, 'green');
+    POP.Draw.circle(100, 100, 50, 'rgba(255, 0, 0, 0.5)');
+    POP.Draw.text('Hello World', 100, 100, 10, '#000');
+  },
 
-        // this will create some extra space on the page, allowing us to
-        // scroll past the address bar, thus hiding it
-        if (POP.android || POP.ios) {
-          document.body.style.height = (window.innerHeight + 50) + 'px';
-        }
+  resize: function() {
+    POP.currentHeight = window.innerHeight;
+    // resize the width in propotion to the new height
+    POP.currentWidth = POP.currentHeight * POP.RATIO;
 
-        // set the new canvas style width and height
-        // note: our canvas is still 320 x 480, but we're essentially scaling
-        // it with CSS
-        POP.canvas.style.width = POP.currentWidth + 'px';
-        POP.canvas.style.height = POP.currentHeight + 'px';
+    // this will create some extra space on the page, allowing us to
+    // scroll past the address bar, thus hiding it
+    if (POP.android || POP.ios) {
+      document.body.style.height = (window.innerHeight + 50) + 'px';
+    }
 
-        // we use a timeout here because some mobile browser don't fire if
-        // there is not a short delay
-        window.setTimeout(function() {
-          window.scrollTo(0, 1);
-        }, 1);
-      }
-    };
+    // set the new canvas style width and height
+    // note: our canvas is still 320 x 480, but we're essentially scaling
+    // it with CSS
+    POP.canvas.style.width = POP.currentWidth + 'px';
+    POP.canvas.style.height = POP.currentHeight + 'px';
 
-    // abstracts various canvas operations into standalone functions
-    POP.Draw = {
-      clear: function() {
-        POP.ctx.clearRect(0, 0, POP.WIDTH, POP.HEIGHT);
-      },
+    POP.scale = POP.currentWidth / POP.WIDTH;
+    POP.offset.top = POP.canvas.offsetTop;
+    POP.offset.left = POP.canvas.offsetLeft;
 
-      rect: function(x, y, w, h, col) {
-        POP.ctx.fillStyle = col;
-        POP.ctx.fillRect(x, y, w, h);
-      },
+    // we use a timeout here because some mobile browser don't fire if
+    // there is not a short delay
+    window.setTimeout(function() {
+      window.scrollTo(0, 1);
+    }, 1);
+  }
+};
 
-      circle: function(x, y, r, col) {
-        POP.ctx.fillStyle = col;
-        POP.ctx.beginPath();
-        POP.ctx.arc(x + 5, y + 5, r, 0, Math.PI * 2, true);
-        POP.ctx.closePath();
-        POP.ctx.fill();
-      },
+// abstracts various canvas operations into standalone functions
+POP.Draw = {
+  clear: function() {
+    POP.ctx.clearRect(0, 0, POP.WIDTH, POP.HEIGHT);
+  },
 
-      text: function(string, x, y, size, col) {
-        POP.ctx.font = 'bold ' + size + 'px Monospace';
-        POP.ctx.fillStyle = col;
-        POP.ctx.fillText(string, x, y);
-      }
-    };
+  rect: function(x, y, w, h, col) {
+    POP.ctx.fillStyle = col;
+    POP.ctx.fillRect(x, y, w, h);
+  },
 
-    POP.Input = {
-      // TODO
-    };
+  circle: function(x, y, r, col) {
+    POP.ctx.fillStyle = col;
+    POP.ctx.beginPath();
+    POP.ctx.arc(x + 5, y + 5, r, 0, Math.PI * 2, true);
+    POP.ctx.closePath();
+    POP.ctx.fill();
+  },
 
-    window.addEventListener('load', POP.init, false);
-    window.addEventListener('resize', POP.resize, false);
-  </script>
+  text: function(string, x, y, size, col) {
+    POP.ctx.font = 'bold ' + size + 'px Monospace';
+    POP.ctx.fillStyle = col;
+    POP.ctx.fillText(string, x, y);
+  }
+};
+
+POP.Input = {
+  x: 0,
+  y: 0,
+  tapped: false,
+
+  set: function(data) {
+    this.x = (data.pageX - POP.offset.left) / POP.scale;
+    this.y = (data.pageY - POP.offset.top) / POP.scale;
+    this.tapped = true;
+
+    POP.Draw.circle(this.x, this.y, 10, 'red');
+  }
+};
+
+window.addEventListener('load', POP.init, false);
+window.addEventListener('resize', POP.resize, false);
+</script>
 </body>
 </html>

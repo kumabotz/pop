@@ -83,6 +83,19 @@ var POP = {
     POP.ios = (POP.ua.indexOf('iPhone') > -1 ||
         POP.ua.indexOf('iPad') > -1) ? true : false;
 
+    // set up wave effect; basically, a series of overlapping circles across the
+    // top of screen
+    POP.wave = {
+      x: -25, // x coordinate of first circle
+      y: -40, // y coordinate of first circle
+      r: 50, // circle radius
+      time: 0, // we'll use this in calculating the sine wave
+      offset: 0 // this will be the sine wave offset
+    };
+
+    // calculate how many circles we need to cover the screen's width
+    POP.wave.total = Math.ceil(POP.WIDTH / POP.wave.r) + 1;
+
     // listen for clicks
     window.addEventListener('click', function(e) {
       e.preventDefault();
@@ -198,6 +211,11 @@ var POP = {
       }
     }
 
+    // update wave offset, feel free to play with these values for either
+    // slower or faster waves
+    POP.wave.time = new Date().getTime() * 0.002;
+    POP.wave.offset = Math.sin(POP.wave.time * 0.8) * 5;
+
     // calculate accuracy
     POP.score.accuracy = (POP.score.hit / POP.score.taps) * 100;
     POP.score.accuracy = isNaN(POP.score.accuracy) ?
@@ -210,6 +228,15 @@ var POP = {
     var i;
 
     POP.Draw.rect(0, 0, POP.WIDTH, POP.HEIGHT, '#036');
+
+    // display snazzy wave effect
+    for (i = 0; i < POP.wave.total; i++) {
+      POP.Draw.circle(
+          POP.wave.x + POP.wave.offset + (i * POP.wave.r),
+          POP.wave.y,
+          POP.wave.r,
+          '#fff');
+    }
 
     // cycle through all entities and render to canvas
     for (i = 0; i < POP.entities.length; i += 1) {

@@ -1,4 +1,4 @@
-pop [![Code Climate](https://codeclimate.com/github/kumabotz/pop.png)](https://codeclimate.com/github/kumabotz/pop)
+pop
 ===
 source: http://mobile.smashingmagazine.com/2012/10/19/design-your-own-mobile-game/
 

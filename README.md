@@ -24,4 +24,4 @@ And then do these:
 - [x] convert into [rails app](http://popy.herokuapp.com/)
 - [x] deploy to [heroku](http://popy.herokuapp.com/)
 - [ ] setup test
-- [ ] responsive layout (foundation)
+- [ ] responsive layout ([foundation](http://foundation.zurb.com/))

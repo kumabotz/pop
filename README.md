@@ -21,7 +21,9 @@ And then do these:
 1. Run the :star2: Rails app: `bundle exec rails s`
 
 ## TODO
-- [x] convert into [rails app](http://popy.herokuapp.com/)
-- [x] deploy to [heroku](http://popy.herokuapp.com/)
-- [ ] setup test
-- [ ] responsive layout ([foundation](http://foundation.zurb.com/))
+- [x] Convert into [rails app](http://popy.herokuapp.com/)
+- [x] Deploy to [heroku](http://popy.herokuapp.com/)
+- [ ] BEM
+- [ ] JS 
+- [ ] Setup test
+- [ ] Responsive layout ([foundation](http://foundation.zurb.com/))

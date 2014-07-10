@@ -6,7 +6,7 @@ source: http://mobile.smashingmagazine.com/2012/10/19/design-your-own-mobile-gam
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kumabotz/pop/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-## Setup Development
+## Development Setup
 
 You'll need these installed in your box:
 
@@ -17,9 +17,10 @@ You'll need these installed in your box:
 1. bundler: `gem install bundler --no-ri --no-rdoc`
 
 And then do these:
+
 1. Setup RVM project file: `rvm --ruby-version use 2.1.2@pop --create`
 1. Install gem dependencies: `bundle install`
-1. Run the shiny Rails app: `bundle exec rails s`
+1. Run the :star2: Rails app: `bundle exec rails s`
 
 ## TODO
 - [ ] rails app

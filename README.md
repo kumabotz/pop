@@ -1,7 +1,5 @@
 # [pop](http://popy.herokuapp.com/) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kumabotz/pop/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-source: http://mobile.smashingmagazine.com/2012/10/19/design-your-own-mobile-game/
-
 ![](https://raw.github.com/kumabotz/pop/master/game.png)
 
 ## Development Setup
@@ -27,3 +25,7 @@ And then do these:
 - [ ] JS 
 - [ ] Setup test
 - [ ] Responsive layout ([foundation](http://foundation.zurb.com/))
+
+## References
+- [How To Design A Mobile Game With HTML5](http://mobile.smashingmagazine.com/2012/10/19/design-your-own-mobile-game/)
+- [Ruby on Rails Tutorial](http://www.railstutorial.org/book)

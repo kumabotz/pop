@@ -23,7 +23,7 @@ And then do these:
 ## TODO
 - [x] Convert into [rails app](http://popy.herokuapp.com/)
 - [x] Deploy to [heroku](http://popy.herokuapp.com/)
-- [ ] BEM
+- [ ] [BEM](http://bem.info/)
 - [ ] JS 
 - [ ] Setup test
 - [ ] Responsive layout ([foundation](http://foundation.zurb.com/))

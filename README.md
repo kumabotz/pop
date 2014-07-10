@@ -9,5 +9,5 @@ source: http://mobile.smashingmagazine.com/2012/10/19/design-your-own-mobile-gam
 ## TODO
 - [ ] rails app
 - [ ] setup test
-- [ ] deploy to heroku
+- [x] deploy to [heroku](http://popy.herokuapp.com/)
 - [ ] responsive (foundation)

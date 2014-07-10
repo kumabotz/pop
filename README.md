@@ -2,7 +2,7 @@
 
 ![](https://raw.github.com/kumabotz/pop/master/game.png)
 
-## Development Setup
+## Setup
 
 You'll need these installed in your box:
 

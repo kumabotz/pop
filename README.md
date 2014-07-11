@@ -1,4 +1,4 @@
-# [pop](http://popy.herokuapp.com/) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kumabotz/pop/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# [pop](http://playpop.herokuapp.com/) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kumabotz/pop/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ![](https://raw.github.com/kumabotz/pop/master/game.png)
 
@@ -19,12 +19,13 @@ And then do these:
 1. Run the :star2: Rails app: `bundle exec rails s`
 
 ## TODO
-- [x] Convert into [rails app](http://popy.herokuapp.com/)
-- [x] Deploy to [heroku](http://popy.herokuapp.com/)
+- [x] Convert into [rails app](http://playpop.herokuapp.com/)
+- [x] Deploy to [heroku](http://playpop.herokuapp.com/)
 - [x] Add nitrous [HACK button](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=kumabotz%2Fpop&file_to_open=README.md)
 - [x] Setup [foundation](http://foundation.zurb.com/)
-- [ ] Add Google Analytic
-- [ ] Use [BEM](http://bem.info/)
+- [x] Add Google Analytic
+- [x] Use [BEM](http://bem.info/)
+- [ ] Add [Fontello](http://fontello.com/)
 - [ ] Update JS architecture
 - [ ] Setup tests
 - [ ] Responsive layout

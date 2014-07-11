@@ -2,7 +2,7 @@
 
 ![](https://raw.github.com/kumabotz/pop/master/game.png)
 
-## Setup
+## Setup [![Hack kumabotz/pop on Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-s-v1-7475db0cf93fe5d1e29420c928ebc614.png)](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=kumabotz%2Fpop&file_to_open=README.md)
 
 You'll need these installed in your box:
 
@@ -21,10 +21,12 @@ And then do these:
 ## TODO
 - [x] Convert into [rails app](http://popy.herokuapp.com/)
 - [x] Deploy to [heroku](http://popy.herokuapp.com/)
-- [ ] [BEM](http://bem.info/)
-- [ ] JS 
-- [ ] Setup test
-- [ ] Responsive layout ([foundation](http://foundation.zurb.com/))
+- [x] Add nitrous [HACK button](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=kumabotz%2Fpop&file_to_open=README.md)
+- [ ] Setup [foundation](http://foundation.zurb.com/)
+- [ ] Use [BEM](http://bem.info/)
+- [ ] Update JS architecture
+- [ ] Setup tests
+- [ ] Responsive layout
 
 ## References
 - [How To Design A Mobile Game With HTML5](http://mobile.smashingmagazine.com/2012/10/19/design-your-own-mobile-game/)

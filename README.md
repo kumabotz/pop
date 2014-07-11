@@ -22,7 +22,8 @@ And then do these:
 - [x] Convert into [rails app](http://popy.herokuapp.com/)
 - [x] Deploy to [heroku](http://popy.herokuapp.com/)
 - [x] Add nitrous [HACK button](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=kumabotz%2Fpop&file_to_open=README.md)
-- [ ] Setup [foundation](http://foundation.zurb.com/)
+- [x] Setup [foundation](http://foundation.zurb.com/)
+- [ ] Add Google Analytic
 - [ ] Use [BEM](http://bem.info/)
 - [ ] Update JS architecture
 - [ ] Setup tests

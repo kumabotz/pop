@@ -8,3 +8,30 @@ body, .cover {
 .cover {
   text-align: center;
 }
+
+.cover__greet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.cover__text {
+  color: #f05a23;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.cover__social {
+  padding-bottom: 1em;
+}
+
+.cover__twitter {
+  color: #f8f023;
+  font-size: 40px;
+
+  &:hover {
+    color: #f8f023;
+    text-decoration: underline;
+  }
+}

@@ -1,3 +1,9 @@
+<% provide :title, 'Pop' %>
 <div class="cover">
+  <marquee class="cover__greet"><blink><h2 class="cover__text">Yo</h2></blink></marquee>
   <%= image_tag 'flappy.gif' %>
+  <label class="cover__social">
+    <%= link_to '@kumabotz', 'https://twitter.com/kumabotz',
+      class: 'cover__twitter', target: '_blank' %>
+  </label>
 </div>

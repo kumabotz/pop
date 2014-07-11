@@ -21,9 +21,10 @@ And then do these:
 ## TODO
 - [x] Convert into [rails app](http://popy.herokuapp.com/)
 - [x] Deploy to [heroku](http://popy.herokuapp.com/)
-- [ ] [BEM](http://bem.info/)
-- [ ] JS 
-- [ ] Setup test
+- [x] Add nitrous [HACK button](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=kumabotz%2Fpop&file_to_open=README.md)
+- [ ] Use [BEM](http://bem.info/)
+- [ ] Update JS architecture
+- [ ] Setup tests
 - [ ] Responsive layout ([foundation](http://foundation.zurb.com/))
 
 ## References

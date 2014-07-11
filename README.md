@@ -22,10 +22,11 @@ And then do these:
 - [x] Convert into [rails app](http://popy.herokuapp.com/)
 - [x] Deploy to [heroku](http://popy.herokuapp.com/)
 - [x] Add nitrous [HACK button](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=kumabotz%2Fpop&file_to_open=README.md)
+- [ ] Setup [foundation](http://foundation.zurb.com/)
 - [ ] Use [BEM](http://bem.info/)
 - [ ] Update JS architecture
 - [ ] Setup tests
-- [ ] Responsive layout ([foundation](http://foundation.zurb.com/))
+- [ ] Responsive layout
 
 ## References
 - [How To Design A Mobile Game With HTML5](http://mobile.smashingmagazine.com/2012/10/19/design-your-own-mobile-game/)

@@ -59,6 +59,7 @@ Pop::Application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   config.assets.precompile += %w( .svg .eot .woff .ttf )
 
   # Ignore bad email addresses and do not raise email delivery errors.

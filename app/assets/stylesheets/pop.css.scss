@@ -3,6 +3,7 @@ body, .cover {
 }
 
 .cover {
+  font-family: 'SilkscreenNormal', Arial, sans-serif;
   text-align: center;
 }
 
@@ -15,8 +16,8 @@ body, .cover {
 
 .cover__text {
   color: #f05a23;
+  font-family: 'SilkscreenBold';
   font-size: 48px;
-  font-weight: bold;
 }
 
 .cover__social {

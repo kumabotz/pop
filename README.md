@@ -25,6 +25,7 @@ And then do these:
 - [x] Setup [foundation](http://foundation.zurb.com/)
 - [x] Add Google Analytic
 - [x] Use [BEM](http://bem.info/)
+- [x] Add custom font
 - [ ] Add [Fontello](http://fontello.com/)
 - [ ] Update JS architecture
 - [ ] Setup tests

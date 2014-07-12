@@ -4,7 +4,7 @@
     weight: normal;
     style: normal;
   }
-  src: url('/assets/slkscr-webfont.woff') format('woff');
+  src: font-url('/assets/slkscr-webfont.woff') format('woff');
 }
 
 @font-face {
@@ -13,5 +13,5 @@
     weight: normal;
     style: normal;
   }
-  src: url('/assets/slkscrb-webfont.woff') format('woff');
+  src: font-url('/assets/slkscrb-webfont.woff') format('woff');
 }

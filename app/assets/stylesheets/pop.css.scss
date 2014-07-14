@@ -3,7 +3,7 @@ body, .cover {
 }
 
 .cover {
-  background: url(/assets/flappy.gif) no-repeat center;
+  background: image-url('flappy.gif') no-repeat center;
   font-family: 'SilkscreenNormal', Arial, sans-serif;
   margin: 1em 0;
   min-height: 480px;

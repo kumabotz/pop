@@ -3,33 +3,42 @@ body, .cover {
 }
 
 .cover {
+  background: url(/assets/flappy.gif) no-repeat center;
   font-family: 'SilkscreenNormal', Arial, sans-serif;
+  margin: 1em 0;
+  min-height: 480px;
   text-align: center;
 }
 
 .cover__greet {
-  position: absolute;
   left: 0;
+  position: absolute;
   right: 0;
-  top: 0;
+  top: -1em;
 }
 
 .cover__text {
   color: #f05a23;
   font-family: 'SilkscreenBold';
   font-size: 48px;
+  margin: 0;
 }
 
 .cover__social {
-  padding-bottom: 1em;
+  background-color: rgba(0,0,0,0.7);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
 }
 
 .cover__twitter {
   color: #f8f023;
+  display: block;
   font-size: 40px;
+  padding: 1em 0;
 
   &:hover {
     color: #f8f023;
-    text-decoration: underline;
   }
 }

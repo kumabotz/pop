@@ -2,12 +2,11 @@
 <div class="cover">
   <marquee class="cover__greet">
     <blink>
-    <%= content_tag :h2, class: 'cover__text',
-      title: 'Another Way of saying "hey" or "hi"', data: {tooltip: true} do %>
-      Yoooooooooooooooooooo
-    <% end %>
+      <h2 class="cover__text">Yoooooooooooooooooooo</h2>
     </blink>
   </marquee>
+  <%= content_tag :div, class: 'cover__easter',
+    title: 'KUA KUA, you found me!', data: {tooltip: true} do %><% end %>
   <label class="cover__social">
     <%= link_to '@kumabotz', 'https://twitter.com/kumabotz',
       class: 'cover__twitter', target: '_blank' %>

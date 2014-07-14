@@ -24,6 +24,17 @@ body, .cover {
   margin: 0;
 }
 
+.cover__easter {
+  padding: 4em;
+  position: absolute;
+  top: 30%;
+  right: 20%;
+
+  &:hover {
+    border: 2px dashed #f05a23;
+  }
+}
+
 .cover__social {
   background-color: rgba(0,0,0,0.7);
   bottom: 0;

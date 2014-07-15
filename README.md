@@ -29,14 +29,14 @@ And then do these:
 - [x] Convert into [rails app](http://playpop.herokuapp.com/)
 - [x] Deploy to [heroku](http://playpop.herokuapp.com/)
 - [x] Add nitrous [HACK button](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=kumabotz%2Fpop&file_to_open=README.md)
-- [x] Setup [foundation](http://foundation.zurb.com/)
 - [x] Add Google Analytic
+- [x] Setup [foundation](http://foundation.zurb.com/)
+- [x] Responsive layout
 - [x] Use [BEM](http://bem.info/)
 - [x] Add custom font
 - [ ] Add [Fontello](http://fontello.com/)
 - [ ] Update JS architecture
 - [ ] Setup tests
-- [ ] Responsive layout
 
 ## References
 - [How To Design A Mobile Game With HTML5](http://mobile.smashingmagazine.com/2012/10/19/design-your-own-mobile-game/)

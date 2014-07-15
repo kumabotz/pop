@@ -31,7 +31,7 @@ And then do these:
 - [x] Add nitrous [HACK button](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=kumabotz%2Fpop&file_to_open=README.md)
 - [x] Add Google Analytic
 - [x] Setup [foundation](http://foundation.zurb.com/)
-- [x] Responsive layout
+- [x] [Responsive layout](http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32)
 - [x] Use [BEM](http://bem.info/)
 - [x] Add custom font
 - [ ] Add [Fontello](http://fontello.com/)

@@ -18,7 +18,7 @@ And then do these:
 1. Install gem dependencies: `bundle install`
 1. Run the :star2: Rails app: `bundle exec rails s`
 
-## ProTips
+## ProTip
 
 Speed up rails testing
 

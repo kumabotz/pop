@@ -1,0 +1,14 @@
+@mixin respond-to($media) {
+  @if $media == small {
+    @media #{$small} { @content; }
+  }
+  @else if $media == medium {
+    @media #{$medium} { @content; }
+  }
+  @else if $media == large {
+    @media #{$large} { @content; }
+  }
+  @else if $media == xlarge {
+    @media #{$xlarge} { @content; }
+  }
+}

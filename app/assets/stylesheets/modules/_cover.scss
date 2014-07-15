@@ -1,7 +1,3 @@
-body, .cover {
-  background-color: #70c5ce;
-}
-
 .cover {
   background: image-url('flappy.gif') no-repeat center;
   font-family: 'SilkscreenNormal', Arial, sans-serif;
@@ -14,7 +10,7 @@ body, .cover {
   left: 0;
   position: absolute;
   right: 0;
-  top: -1em;
+  top: 0;
 }
 
 .cover__text {
@@ -48,6 +44,14 @@ body, .cover {
   display: block;
   font-size: 40px;
   padding: 1em 0;
+
+  @include respond-to(medium) {
+    padding: 0.5em 0;
+  }
+
+  @include respond-to(large) {
+    padding: 0.3em 0;
+  }
 
   &:hover {
     color: #f8f023;

@@ -20,7 +20,7 @@ And then do these:
 
 ## ProTip
 
-Speed up rails testing
+[Speed up rails testing](http://railscasts.com/episodes/412-fast-rails-commands)
 
 1. `gem install zeus`
 1. `zues start`

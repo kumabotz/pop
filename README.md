@@ -18,6 +18,13 @@ And then do these:
 1. Install gem dependencies: `bundle install`
 1. Run the :star2: Rails app: `bundle exec rails s`
 
+## ProTips
+
+Speed up rails testing
+
+1. `gem install zeus`
+1. `zues start`
+
 ## TODO
 - [x] Convert into [rails app](http://playpop.herokuapp.com/)
 - [x] Deploy to [heroku](http://playpop.herokuapp.com/)

@@ -8,7 +8,8 @@
   <%= content_tag :div, class: 'cover__easter',
     title: 'KUA KUA, you found me!', data: {tooltip: true} do %><% end %>
   <label class="cover__social">
-    <%= link_to '@kumabotz', 'https://twitter.com/kumabotz',
+    <%= link_to "<i class=\"icon-twitter cover__icon\"></i>@kumabotz".html_safe,
+      'https://twitter.com/kumabotz',
       class: 'cover__twitter', target: '_blank' %>
   </label>
 </div>

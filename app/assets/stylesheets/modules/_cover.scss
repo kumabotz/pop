@@ -40,7 +40,7 @@
 }
 
 .cover__twitter {
-  color: #f8f023;
+  color: #70c5ce;
   display: block;
   font-size: 40px;
   padding: 1em 0;
@@ -54,6 +54,10 @@
   }
 
   &:hover {
-    color: #f8f023;
+    color: #70c5ce;
   }
+}
+
+.cover__icon {
+  padding-right: 10px;
 }

@@ -34,7 +34,7 @@ And then do these:
 - [x] [Responsive layout](http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32)
 - [x] Use [BEM](http://bem.info/)
 - [x] Add custom font
-- [ ] Add [Fontello](http://fontello.com/)
+- [x] Add [Fontello](http://fontello.com/)
 - [ ] Update JS architecture
 - [ ] Setup tests
 

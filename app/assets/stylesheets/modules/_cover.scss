@@ -1,3 +1,5 @@
+$orange: #f05a23;
+
 .cover {
   background: image-url('flappy.gif') no-repeat center;
   font-family: 'SilkscreenNormal', Arial, sans-serif;
@@ -14,20 +16,33 @@
 }
 
 .cover__text {
-  color: #f05a23;
+  color: $orange;
   font-family: 'SilkscreenBold';
   font-size: 48px;
   margin: 0;
 }
 
 .cover__easter {
-  padding: 4em;
   position: absolute;
   top: 30%;
   right: 20%;
 
+  &:focus,
   &:hover {
-    border: 2px dashed #f05a23;
+    border: 2px dashed $orange;
+  }
+}
+
+.cover__easter-link {
+  display: block;
+  font-size: 26px;
+  opacity: 0;
+  padding: 1em;
+
+  &:focus,
+  &:hover {
+    color: $orange;
+    opacity: 1;
   }
 }
 

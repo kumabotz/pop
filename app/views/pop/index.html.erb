@@ -6,7 +6,9 @@
     </blink>
   </marquee>
   <%= content_tag :div, class: 'cover__easter',
-    title: 'KUA KUA, you found me!', data: {tooltip: true} do %><% end %>
+    title: 'KUA KUA, you found me!', data: {tooltip: true} do %>
+    <%= link_to 'Play', games_path, class: 'cover__easter-link', target: '_self' %>
+  <% end %>
   <label class="cover__social">
     <%= link_to "<i class=\"icon-twitter cover__icon\"></i>@kumabotz".html_safe,
       'https://twitter.com/kumabotz',

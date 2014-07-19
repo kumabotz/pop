@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= render 'layouts/head_tags', stylesheet_name: 'pop' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= render 'layouts/bottom_body_tags', script_name: 'pop' %>
+  </body>
+</html>

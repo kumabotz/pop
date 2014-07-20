@@ -5,6 +5,7 @@ rvm:
 before_script:
   - mysql -e 'create database pop_test;'
   - "echo 'test:\n username: travis\n encoding: utf8\n database: pop_test\n adapter: mysql2' > config/database.yml"
+  - bundle exec rake db:migrate
   - bundle exec rake db:schema:load
   - bundle exec rake db:test:prepare
 script: bundle exec rspec spec

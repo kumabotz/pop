@@ -60,7 +60,7 @@ Pop::Application.configure do
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   config.assets.precompile += %w(
-  pop-css/pop.css pop-js/pop.js
+  pop-css/pop.css pop-js/pop.coffee
   pop-css/games.css pop-js/games.js)
 
   # Ignore bad email addresses and do not raise email delivery errors.

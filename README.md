@@ -35,8 +35,9 @@ And then do these:
 - [x] Use [BEM](http://bem.info/)
 - [x] Add custom font
 - [x] Add [Fontello](http://fontello.com/)
-- [ ] Update JS architecture
+- [x] Use [coffeescripts](http://coffeescript.org/)
 - [ ] Setup tests
+- [ ] Update JS architecture
 
 ## References
 - [How To Design A Mobile Game With HTML5](http://mobile.smashingmagazine.com/2012/10/19/design-your-own-mobile-game/)

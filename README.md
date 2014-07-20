@@ -36,7 +36,7 @@ And then do these:
 - [x] Add custom font
 - [x] Add [Fontello](http://fontello.com/)
 - [x] Use [coffeescripts](http://coffeescript.org/)
-- [ ] Setup tests
+- [x] Setup tests
 - [ ] Update JS architecture
 
 ## References

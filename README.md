@@ -1,4 +1,4 @@
-# [pop](http://playpop.herokuapp.com/) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kumabotz/pop/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Build Status](https://travis-ci.org/kumabotz/pop.png?branch=master)](https://travis-ci.org/kumabotz/pop)
+# [pop](http://playpop.herokuapp.com/) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kumabotz/pop/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Build Status](https://travis-ci.org/kumabotz/pop.png?branch=master)](https://travis-ci.org/kumabotz/pop) [![Code Climate](https://codeclimate.com/github/kumabotz/pop.png)](https://codeclimate.com/github/kumabotz/pop)
 
 ![](https://raw.github.com/kumabotz/pop/master/app/assets/images/yo.png)
 ![](https://raw.github.com/kumabotz/pop/master/app/assets/images/game.png)

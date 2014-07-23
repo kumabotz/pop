@@ -1,6 +1,7 @@
 # [pop](http://playpop.herokuapp.com/) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kumabotz/pop/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Build Status](https://travis-ci.org/kumabotz/pop.png?branch=master)](https://travis-ci.org/kumabotz/pop) [![Code Climate](https://codeclimate.com/github/kumabotz/pop.png)](https://codeclimate.com/github/kumabotz/pop)
 
 ![](https://raw.github.com/kumabotz/pop/master/app/assets/images/yo.png)
+
 ![](https://raw.github.com/kumabotz/pop/master/app/assets/images/game.png)
 
 ## Setup [![Hack kumabotz/pop on Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-s-v1-7475db0cf93fe5d1e29420c928ebc614.png)](https://www.nitrous.io/hack_button?source=embed&runtime=rails&repo=kumabotz%2Fpop&file_to_open=README.md)
@@ -25,6 +26,14 @@ And then do these:
 
 1. `gem install zeus`
 1. `zues start`
+
+Deploy to Heroku from another computer
+
+1. Install heroku client `curl https://toolbelt.heroku.com/install.sh | sh`
+1. `heroku login`
+1. `git remote add <heroku repo.git>`
+1. `heroku keys:add`
+1. `git push heroku master`
 
 ## TODO
 - [x] Convert into [rails app](http://playpop.herokuapp.com/)

@@ -77,8 +77,8 @@ POP =
     # calculate how many circles we need to cover the screen's width
     POP.wave.total = Math.ceil(POP.WIDTH / POP.wave.r) + 1
 
-    # listen for clicks
-    window.addEventListener "click", ((e) ->
+    # listen for mouse down
+    window.addEventListener "mousedown", ((e) ->
       e.preventDefault()
       POP.Input.set e
       return
